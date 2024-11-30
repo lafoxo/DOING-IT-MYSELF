@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <section>
+        <img class="myslides" src="Screenshot (5).png" style="height:490px">
+        <img class="myslides" src="Screenshot (1).png" style="height:500px">
+        <img class="myslides" src="Screenshot (2).png" style="height:500px">
+        <img class="myslides" src="63867979164033.png" style="height:500px">
+    </section>
+    <script>
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+        </script>
+    <div class="footer">
+        <p>@copy all rights and reserved by Ololade Ogunmuditi</p>
